@@ -1,7 +1,20 @@
 # MenuTemplate
 Template menu for JMonkey Game Engine
 
-### Screens
+### Features:
+1. 6 menu screens.
+2. I18n (with bitmap fonts) into 10 languages including russian, korean, japanese and chinese.
+3. Menu music and sound effects.
+4. Saving and loading options.
+5. Gameplay pause overlay with blur effect. 
+6. Support for keybord, mouse and gamepad (XBOX and PS4) out of the box.
+7. Support for different resolutions. 
+8. Window icon decoration.
+9. Basic menu decoration. 
+10. Intro ready - initially disabled.
+11. Loading screens preloading models and textures.
+
+### Screens:
 1. Intro
 2. Pre menu loading
 3. Main menu
@@ -9,16 +22,17 @@ Template menu for JMonkey Game Engine
 5. Language selection
 6. Pre game loading
 
-### Features:
-1. 6 screens inlcuding loading screens and intro.
-2. I18n (with bitmap fonts) into 10 languages including russian, korean, japanese and chinese.
-3. Menu music and sound effects.
-4. Saving and loading options.
-5. Gameplay pause overlay
-6. Support for keybord, mouse and gamepad (XBOX and PS4) out of the box.
-7. Support for different resolutions. 
-8. Window icon decoration.
-9. Menu basic decoration. 
+### Languages:
+1. English
+2. German
+3. Italian
+4. French
+5. Spanish
+6. Polish
+7. Russian
+8. Korean
+9. Chinese
+10. Japanese
 
 ### Related projects:
 
