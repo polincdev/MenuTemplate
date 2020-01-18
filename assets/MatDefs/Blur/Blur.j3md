@@ -1,0 +1,19 @@
+MaterialDef BoxBlur {
+
+MaterialParameters {
+    Int NumSamples;
+    Texture2D Texture;
+    Texture2D TextureColor;
+    Vector2 Resolution;
+  
+    Float Strength;
+}
+
+Technique {
+    VertexShader GLSL110:   MatDefs/Blur/Blur.vert
+    FragmentShader GLSL110: MatDefs/Blur/Blur.frag
+    WorldParameters {
+        
+    }
+}
+}
