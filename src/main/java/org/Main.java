@@ -1,8 +1,8 @@
-package org;
+package main.java.org;
  
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.BaseAppState;
-import com.jme3.font.BitmapFont;
+ 
 import com.jme3.input.KeyInput;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.input.controls.KeyTrigger;
@@ -16,21 +16,21 @@ import com.simsilica.lemur.style.BaseStyles;
 import java.io.IOException;
 import java.util.Arrays;
  import java.util.Locale;
-import java.util.concurrent.Callable;
+ 
  import javax.imageio.ImageIO;
-import org.menu.audio.MenuAudioEffectsHelper;
-import org.menu.audio.MusicHelper;
-import org.menu.screens.LoadingPreMenuScreen;
-import org.menu.screens.LoadingPreGameScreen;
-import org.menu.screens.GameScreen;
-import org.menu.screens.MenuMainScreen;
-import org.menu.screens.OptionsMainScreen;
-import org.menu.screens.OptionsLangScreen;
-import org.menu.screens.TutorialScreen;
-import org.menu.settings.GameSettings;
-import org.menu.settings.SaveHelper;
-import org.menu.settings.SaveObject;
-import org.smp.player.SimpleMediaPlayer;
+import main.java.org.menu.audio.MenuAudioEffectsHelper;
+import main.java.org.menu.audio.MusicHelper;
+import main.java.org.menu.screens.LoadingPreMenuScreen;
+import main.java.org.menu.screens.LoadingPreGameScreen;
+import main.java.org.menu.screens.GameScreen;
+import main.java.org.menu.screens.MenuMainScreen;
+import main.java.org.menu.screens.OptionsMainScreen;
+import main.java.org.menu.screens.OptionsLangScreen;
+import main.java.org.menu.screens.TutorialScreen;
+import main.java.org.menu.settings.GameSettings;
+import main.java.org.menu.settings.SaveHelper;
+import main.java.org.menu.settings.SaveObject;
+import main.java.org.smp.player.SimpleMediaPlayer;
  
   
  
@@ -281,7 +281,7 @@ public static void selectLanguage(int language)
     //jezlei autommatyczne
   if(language==GameSettings.LANG_AUTO)
     {
-    //
+     //
       Locale locale = Locale.getDefault();
       String lang = locale.getDisplayLanguage();
       String country = locale.getLanguage().toLowerCase();

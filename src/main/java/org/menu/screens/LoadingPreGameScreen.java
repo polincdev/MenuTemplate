@@ -1,10 +1,10 @@
-package org.menu.screens;
+package main.java.org.menu.screens;
 
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.app.state.BaseAppState;
 import com.jme3.asset.AssetManager;
-import com.jme3.material.RenderState;
+ 
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.FastMath;
 import com.jme3.math.Vector3f;
@@ -15,10 +15,9 @@ import com.simsilica.lemur.Panel;
 import com.simsilica.lemur.ProgressBar;
 import com.simsilica.lemur.component.QuadBackgroundComponent;
 import java.util.LinkedList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.Main;
-import org.menu.settings.Vars;
+ 
+import main.java.org.Main;
+import main.java.org.menu.settings.Vars;
  
 public class LoadingPreGameScreen extends BaseAppState {
     

@@ -1,5 +1,5 @@
  
-package org.menu.pause;
+package main.java.org.menu.pause;
 
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
@@ -30,18 +30,12 @@ import com.simsilica.lemur.GuiGlobals;
 import com.simsilica.lemur.HAlignment;
 import com.simsilica.lemur.VAlignment;
 import com.simsilica.lemur.component.BorderLayout;
-import com.simsilica.lemur.component.QuadBackgroundComponent;
-import com.simsilica.lemur.event.DefaultMouseListener;
-import com.simsilica.lemur.event.MouseEventControl;
 import com.simsilica.lemur.event.MouseListener;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import org.Main;
-import org.menu.audio.MenuAudioEffectsHelper;
-import org.menu.screens.OptionsLangScreen;
-import org.menu.screens.OptionsMainScreen;
-import org.menu.settings.GameSettings;
-import org.menu.settings.SaveHelper;
+import main.java.org.Main;
+import main.java.org.menu.audio.MenuAudioEffectsHelper;
+
 
  
 public class PauseOverlay  implements ActionListener, MouseListener{

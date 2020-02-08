@@ -1,4 +1,4 @@
-package org.menu.screens;
+package main.java.org.menu.screens;
  
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
@@ -38,11 +38,11 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
-import org.Main;
-import org.menu.audio.MenuAudioEffectsHelper;
-import org.menu.audio.MusicHelper;
-import org.menu.settings.Vars;
-import org.smp.player.SimpleMediaPlayer;
+import main.java.org.Main;
+import main.java.org.menu.audio.MenuAudioEffectsHelper;
+import main.java.org.menu.audio.MusicHelper;
+import main.java.org.menu.settings.Vars;
+import main.java.org.smp.player.SimpleMediaPlayer;
 
  
 public class TutorialScreen extends BaseAppState implements RawInputListener,  ActionListener, MouseListener   {
@@ -170,19 +170,19 @@ public class TutorialScreen extends BaseAppState implements RawInputListener,  A
           buttonNode.attachChild(menuGeometry3);
           //Position      
          menuGeometry3.setLocalTranslation(menuGeometry1.getLocalTranslation().x,  cam.getHeight()/4-hei/2 , 1.0f);
-           //Add to map for picking
-          pickPlayer.put(new Rectangle((int)menuGeometry3.getLocalTranslation().x, (int)menuGeometry3.getLocalTranslation().y ,mediaPlayer3.getWidth(),mediaPlayer3.getHeight()),mediaPlayer3);
-          selectPlayer.add(mediaPlayer3);
-          //4
-          screenName="Menu4";
-          menuGeometry4=mediaPlayer4.genGeometry( screenName,wid, hei, idleImageAssetPath, loadingImageAssetPath, pausedImageAssetPath,screenColor,videoAssetPath,audioAssetPath, framesPerSec, playBackMode,alpha );
-          //Add to gui 
-          buttonNode.attachChild(menuGeometry4);
-          //Position      
-           menuGeometry4.setLocalTranslation(menuGeometry2.getLocalTranslation().x,  menuGeometry3.getLocalTranslation().y , 1.0f);
-           //Add to map for picking
-          pickPlayer.put(new Rectangle((int)menuGeometry4.getLocalTranslation().x, (int)menuGeometry4.getLocalTranslation().y ,mediaPlayer1.getWidth(),mediaPlayer1.getHeight()),mediaPlayer4);
-          selectPlayer.add(mediaPlayer4); 
+         //Add to map for picking
+         pickPlayer.put(new Rectangle((int)menuGeometry3.getLocalTranslation().x, (int)menuGeometry3.getLocalTranslation().y ,mediaPlayer3.getWidth(),mediaPlayer3.getHeight()),mediaPlayer3);
+         selectPlayer.add(mediaPlayer3);
+         //4
+         screenName="Menu4";
+         menuGeometry4=mediaPlayer4.genGeometry( screenName,wid, hei, idleImageAssetPath, loadingImageAssetPath, pausedImageAssetPath,screenColor,videoAssetPath,audioAssetPath, framesPerSec, playBackMode,alpha );
+         //Add to gui 
+         buttonNode.attachChild(menuGeometry4);
+         //Position      
+         menuGeometry4.setLocalTranslation(menuGeometry2.getLocalTranslation().x,  menuGeometry3.getLocalTranslation().y , 1.0f);
+         //Add to map for picking
+         pickPlayer.put(new Rectangle((int)menuGeometry4.getLocalTranslation().x, (int)menuGeometry4.getLocalTranslation().y ,mediaPlayer1.getWidth(),mediaPlayer1.getHeight()),mediaPlayer4);
+         selectPlayer.add(mediaPlayer4); 
             
          //Calculations
         int buttonMargin=this.viewPort.getCamera().getHeight()/12;

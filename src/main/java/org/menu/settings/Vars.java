@@ -1,5 +1,5 @@
  
-package org.menu.settings;
+package main.java.org.menu.settings;
  
 public class Vars {
     

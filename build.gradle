@@ -6,7 +6,7 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = "com.Main"
+mainClassName = "org.Main"
 
 group 'org.menu'
 version '1.0'
@@ -28,6 +28,6 @@ dependencies {
 jar {
  
     manifest {
-        attributes 'Main-Class': 'com.Main'
+        attributes 'Main-Class': 'org.Main'
     }
 }

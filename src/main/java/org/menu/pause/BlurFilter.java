@@ -1,4 +1,4 @@
-package org.menu.pause;
+package main.java.org.menu.pause;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.export.InputCapsule;

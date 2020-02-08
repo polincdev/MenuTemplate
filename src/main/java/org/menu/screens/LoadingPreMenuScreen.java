@@ -1,6 +1,6 @@
-package org.menu.screens;
+package main.java.org.menu.screens;
 
-import org.menu.settings.Vars;
+import main.java.org.menu.settings.Vars;
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.app.state.BaseAppState;
@@ -15,7 +15,7 @@ import com.simsilica.lemur.Panel;
 import com.simsilica.lemur.ProgressBar;
 import com.simsilica.lemur.component.QuadBackgroundComponent;
 import java.util.LinkedList;
-import org.Main;
+import main.java.org.Main;
  
 public class LoadingPreMenuScreen extends BaseAppState {
     

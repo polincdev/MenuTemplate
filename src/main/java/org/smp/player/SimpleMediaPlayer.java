@@ -1,6 +1,6 @@
  
   
-package org.smp.player;
+package main.java.org.smp.player;
 
 import com.jme3.app.Application;
 import com.jme3.app.state.BaseAppState;

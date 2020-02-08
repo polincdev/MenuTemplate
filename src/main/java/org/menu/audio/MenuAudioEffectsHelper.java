@@ -1,4 +1,4 @@
-package org.menu.audio;
+package main.java.org.menu.audio;
 
  
 
@@ -6,7 +6,7 @@ import com.jme3.asset.AssetManager;
 import com.jme3.audio.AudioData.DataType;
 import com.jme3.audio.AudioNode;
  
-import org.menu.settings.GameSettings;
+import main.java.org.menu.settings.GameSettings;
  
  
 public class MenuAudioEffectsHelper {

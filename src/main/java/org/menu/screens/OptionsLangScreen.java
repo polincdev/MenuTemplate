@@ -1,7 +1,7 @@
-package org.menu.screens;
+package main.java.org.menu.screens;
 
 
-import org.menu.settings.Vars;
+import main.java.org.menu.settings.Vars;
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.app.state.BaseAppState;
@@ -37,11 +37,11 @@ import com.simsilica.lemur.event.MouseListener;
 import java.util.ArrayList;
  
 import java.util.ResourceBundle;
-import org.Main;
-import org.menu.audio.MenuAudioEffectsHelper;
-import org.menu.audio.MusicHelper;
-import org.menu.settings.GameSettings;
-import org.menu.settings.SaveHelper;
+import main.java.org.Main;
+import main.java.org.menu.audio.MenuAudioEffectsHelper;
+import main.java.org.menu.audio.MusicHelper;
+import main.java.org.menu.settings.GameSettings;
+import main.java.org.menu.settings.SaveHelper;
 
  
 public class OptionsLangScreen  extends BaseAppState implements ActionListener, MouseListener {
