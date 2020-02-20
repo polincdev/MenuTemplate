@@ -35,7 +35,7 @@ Template menu for JMonkey Game Engine
 10. Japanese
 
 ### Bundles:
-The project is based on default Bundle based localization system which requires set of Bundle_properties files. Due to project structure,  which has been adjusted to both NetBeans and Gradle structure, there may be issues will finding properties files. Be advised that in the end all the properties files should be placed next to the top package folder i.e. org or main depending how you build your code. Right now they are placed next to main folder.
+The project is based on default Bundle based localization system which requires set of Bundle_properties files. Be advised that all the properties files should be placed next to the top package folder i.e. org. 
 
 ### Related projects:
 
