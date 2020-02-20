@@ -1,5 +1,5 @@
 # MenuTemplate
-Template menu for JMonkey Game Engine
+Template menu for JMonkey Game Engine. NetBeans Project
 
 ### Features:
 1. 6 menu screens.
