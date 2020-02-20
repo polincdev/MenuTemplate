@@ -34,6 +34,9 @@ Template menu for JMonkey Game Engine
 9. Chinese
 10. Japanese
 
+### Bundles:
+The project is based on default Bundle based localization system which requires set of Bundle_properties files. Be advised that all the properties files should be placed next to the top package folder i.e. org. 
+
 ### Related projects:
 
 https://github.com/jMonkeyEngine-Contributions/Lemur
