@@ -1,5 +1,5 @@
  
-package main.java.org.menu.pause;
+package org.menu.pause;
 
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
@@ -33,8 +33,8 @@ import com.simsilica.lemur.component.BorderLayout;
 import com.simsilica.lemur.event.MouseListener;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import main.java.org.Main;
-import main.java.org.menu.audio.MenuAudioEffectsHelper;
+import org.Main;
+import org.menu.audio.MenuAudioEffectsHelper;
 
 
  

@@ -1,10 +1,10 @@
-package main.java.org.menu.screens;
+package org.menu.screens;
 
-import main.java.org.menu.settings.Vars;
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.app.state.BaseAppState;
 import com.jme3.asset.AssetManager;
+ 
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.FastMath;
 import com.jme3.math.Vector3f;
@@ -15,9 +15,11 @@ import com.simsilica.lemur.Panel;
 import com.simsilica.lemur.ProgressBar;
 import com.simsilica.lemur.component.QuadBackgroundComponent;
 import java.util.LinkedList;
-import main.java.org.Main;
  
-public class LoadingPreMenuScreen extends BaseAppState {
+import org.Main;
+import org.menu.settings.Vars;
+ 
+public class LoadingPreGameScreen extends BaseAppState {
     
     boolean active=true;
      private ViewPort viewPort;
@@ -29,7 +31,11 @@ public class LoadingPreMenuScreen extends BaseAppState {
     private Node localGuiNode = new Node("Settings Screen GuiNode");
     private final ColorRGBA backgroundColor = ColorRGBA.Blue;
     Panel bgImage;
-    
+   
+    Panel leftFigureImage;
+    Panel rightFigureImage;
+    Panel leftImage;
+    Panel rightImage;
     ProgressBar progressBar;
   
      // Appstate
@@ -38,25 +44,45 @@ public class LoadingPreMenuScreen extends BaseAppState {
     int TYPE_IMAGE=0;
     int TYPE_MODEL=1;
    
-    LinkedList<Spatial> loaded=new LinkedList<Spatial>();
     Runnable callback;
     int itemsCount=0;
-    float progressByItem=0;
-    float currentProgress=0;
-    public void init(AppStateManager stateManager, Application app) {
+    int progressByItem=0;
+    int currentProgress=0;
+ 
+    public void init(AppStateManager stateManager, Application app  ) {
           
         this.app = (Main) app;
         this.rootNode = this.app.getRootNode();
         this.viewPort = this.app.getViewPort();
         this.guiNode = this.app.getGuiNode();
         this.assetManager = this.app.getAssetManager();
-   
-        //MENU
+      
+       //MENU
          bgImage=declareImage(this.viewPort.getCamera().getWidth(), this.viewPort.getCamera().getHeight(), 0 , this.viewPort.getCamera().getHeight(),Vars.ASSET_IMAGE_BG);
         //Calculations
         int buttonHeight=this.viewPort.getCamera().getHeight()/20;
-        
+        float figureSize=  this.viewPort.getCamera().getWidth()*0.25f;
+         float figureMargin= figureSize*0.25f;
+         
        
+         float faceSize=  this.viewPort.getCamera().getHeight()*0.4f;
+           //LEFT
+        leftImage = new Panel();
+        //leftImage.setLocalScale ( -1f,1f,1) ;//mirror
+        leftImage.setPreferredSize(new Vector3f( (int)(this.viewPort.getCamera().getHeight()/1.5f),  (this.viewPort.getCamera().getHeight()/10) , 0));
+        localGuiNode.attachChild(leftImage);
+        leftImage.setLocalTranslation(  10,  this.viewPort.getCamera().getHeight() -10  , 0);
+        QuadBackgroundComponent lFaIBG = new QuadBackgroundComponent( assetManager.loadTexture(Vars.ASSET_IMAGE_LOGO));
+        leftImage.setBackground(lFaIBG);    
+          
+         //RIGHT
+        rightImage = new Panel();
+        rightImage.setPreferredSize(new Vector3f( faceSize , (faceSize) , 0));
+        localGuiNode.attachChild(rightImage);
+        rightImage.setLocalTranslation(  this.viewPort.getCamera().getWidth()-faceSize ,  this.viewPort.getCamera().getHeight()/2   , 0);
+        QuadBackgroundComponent lFarIBG = new QuadBackgroundComponent( assetManager.loadTexture(Vars.ASSET_IMAGE_GRAPHIC));
+        rightImage.setBackground(lFarIBG);   
+           
          //PROGRESS
         progressBar = new ProgressBar ();
         progressBar.setPreferredSize(new Vector3f( this.viewPort.getCamera().getWidth()  , buttonHeight, 0));
@@ -71,10 +97,10 @@ public class LoadingPreMenuScreen extends BaseAppState {
         ((QuadBackgroundComponent) progressBar.getValueIndicator().getBackground()).setColor(ColorRGBA.Black);
          localGuiNode.attachChild(progressBar);
          
-        /////////////////LOAD INIT DATA//////////////// 
-        loadData();
+         
     }
-        
+       
+    
     /**
      * 
      * @param sizeX
@@ -94,7 +120,7 @@ public class LoadingPreMenuScreen extends BaseAppState {
         image.setBackground(pBLBG);  
         
         return image;
-    }   
+    }     
 
 void load(String path, int type){
     enqueuedForLoad.add(path);
@@ -107,15 +133,16 @@ void load(String path, int type){
 
 public void update(float tpf){
    
-   
+  
+    
    
 }
+  
  public void postRender()
     {
-     
       if(enqueuedForLoad.size()==0)
         {
-          app.moveFromLoadAppToMain();
+          app.moveFromLoadGameToGame();
          }  
       else
        {
@@ -133,30 +160,31 @@ public void update(float tpf){
               }
             
        }
-     
-    }
  
+ 
+    }
+void clear(){
+ enqueuedTypeForLoad.clear();
+ enqueuedForLoad.clear();
+ currentProgress=0;
+}
 
 /**
- * Indicates gui menu data(textures and models) to preload 
+ * Preloads all models and textures right before the game. Called externally 
+ * 
  */
  public   void loadData( ){
-    //setCallback( );
-
-     //Main 
-     load(Vars.ASSET_IMAGE_LOGO , TYPE_IMAGE);
-     load(Vars.ASSET_IMAGE_GRAPHIC , TYPE_IMAGE );
-     load(Vars.ASSET_IMAGE_RADIO_ON , TYPE_IMAGE );
-     load(Vars.ASSET_IMAGE_RADIO_OFF , TYPE_IMAGE );
-     load(Vars.ASSET_IMAGE_PROG_LEFT , TYPE_IMAGE );
-     load(Vars.ASSET_IMAGE_PROG_RIGHT , TYPE_IMAGE );
-      
-         
-     //Calculate progress steps
-     itemsCount=enqueuedForLoad.size() ;
-     progressByItem=(float)100/(float)itemsCount;
-     currentProgress=0;
-    
+             
+ //////////LOAD MODELS AND TEXTURES HERE////////  
+ //load(.......... , TYPE_IMAGE);
+ 
+ 
+ //Plus one
+ itemsCount=enqueuedForLoad.size() ;
+ progressByItem=100/(itemsCount+1);
+ currentProgress=0;
+ //
+   
 }
  
 
@@ -177,7 +205,11 @@ public void update(float tpf){
         rootNode.attachChild(localRootNode);
         guiNode.attachChild(localGuiNode);
         
-      
+        //zeruje progess
+         progressBar.setProgressValue(100);
+         
+        
+       
      }
 
     @Override

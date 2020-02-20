@@ -1,6 +1,6 @@
-package main.java.org.menu.screens;
+package org.menu.screens;
 
-import main.java.org.menu.settings.Vars;
+import org.menu.settings.Vars;
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.app.state.BaseAppState;
@@ -33,9 +33,9 @@ import com.simsilica.lemur.component.QuadBackgroundComponent;
  import com.simsilica.lemur.event.MouseListener;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
- import main.java.org.Main;
-import main.java.org.menu.audio.MenuAudioEffectsHelper;
-import main.java.org.menu.audio.MusicHelper;
+ import org.Main;
+import org.menu.audio.MenuAudioEffectsHelper;
+import org.menu.audio.MusicHelper;
  
 public class MenuMainScreen extends BaseAppState implements ActionListener, MouseListener {
  

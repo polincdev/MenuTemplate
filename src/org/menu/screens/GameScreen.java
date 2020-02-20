@@ -1,5 +1,5 @@
  
-package main.java.org.menu.screens;
+package org.menu.screens;
 
 import com.jme3.app.Application;
 import com.jme3.app.state.AppStateManager;
@@ -15,9 +15,9 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.shape.Box;
 import com.simsilica.lemur.GuiGlobals;
-import main.java.org.Main;
-import main.java.org.menu.audio.MenuAudioEffectsHelper;
-import main.java.org.menu.pause.PauseOverlay;
+import org.Main;
+import org.menu.audio.MenuAudioEffectsHelper;
+import org.menu.pause.PauseOverlay;
  import com.jme3.input.RawInputListener;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.input.controls.KeyTrigger;

@@ -1,4 +1,4 @@
-package main.java.org.menu.settings;
+package org.menu.settings;
 
   
 import com.jme3.export.Savable;
@@ -7,7 +7,7 @@ import com.jme3.export.binary.BinaryImporter;
   
 import java.io.File; 
 import java.io.IOException;
-import main.java.org.Main;
+import org.Main;
  
  
 public class SaveHelper {

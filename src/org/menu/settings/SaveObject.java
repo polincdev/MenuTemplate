@@ -1,4 +1,4 @@
-package main.java.org.menu.settings;
+package org.menu.settings;
 
  
 import com.jme3.export.InputCapsule;
